@@ -1,0 +1,125 @@
+#Header {
+  background: #4d0b19;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: #4d0b19;
+
+  animation: header 1s alternate ease-in-out;
+  backdrop-filter: blur(10px);
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+
+      h1 {
+        color: #fff;
+        font-size: clamp(24px, 2vw, 36px);
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(20px, 4vw, 76px);
+
+      a {
+        color: #fff;
+        position: relative;
+        font-size: clamp(16px, 2vw, 28px);
+        font-weight: 500;
+
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: #fff;
+          height: 3px;
+          width: 0;
+          left: 0;
+          bottom: -10px;
+          transition: 0.3s;
+        }
+
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      img {
+        width: clamp(20px, 2vw, 100px);
+      }
+
+      a {
+        font-size: clamp(12px, 2vw, 25.91px);
+        font-weight: 500;
+        color: #fff;
+      }
+    }
+
+    .burgerMenu {
+      display: none;
+    }
+
+    &.visible {
+      animation: fadeIn 0.5s forwards;
+    }
+
+    &.hidden {
+      animation: fadeOut 0.5s forwards;
+    }
+  }
+}
+@keyframes header {
+  0% {
+    transform: translateY(-300px);
+  }
+}
+
+@media (max-width: 768px) {
+  #Header {
+    background: #4d0b19;
+
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: #4d0b19;
+    backdrop-filter: blur(10px);
+
+    .content {
+      a {
+        h1 {
+          font-size: 25\2px;
+        }
+      }
+
+      nav {
+        display: none;
+      }
+
+      .contact {
+        display: none;
+      }
+
+      .burgerMenu {
+        display: flex;
+        cursor: pointer;
+      }
+    }
+  }
+}

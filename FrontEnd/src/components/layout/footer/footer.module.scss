@@ -1,0 +1,117 @@
+.Footer {
+  padding: 40px 0;
+  background: #000;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+  box-sizing: border-box;
+  animation: footer 5s alternate ease-in-out;
+  backdrop-filter: blur(10px);
+  @keyframes footer {
+    0% {
+      transform: translateY(300px);
+    }
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      animation: fadeInText 1s ease-in-out;
+      .email {
+        margin-bottom: 20px;
+        color: wheat;
+      }
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        background-color: transparent;
+        padding: 5px;
+        border-radius: 10px;
+        transition: color 0.5s ease, background-color 0.5s ease,
+          border-bottom 0.5s ease, transform 0.3s ease;
+      }
+      a:hover {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+      }
+    }
+    .icons {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .icon {
+        display: flex;
+        gap: 30px;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 25px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50px;
+          background: white;
+          color: black;
+          transition: transform 0.3s ease, box-shadow 0.3s ease,
+            background-color 0.3s ease, color 0.3s ease;
+        }
+        a:hover {
+          transform: scale(1.2);
+          color: white;
+          background-color: #5E0B1C;
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+      }
+      p {
+        font-size: 18px;
+        animation: fadeInText 1.2s ease-in-out;
+        width: 220px;
+      }
+    }
+  }
+
+  @media (max-width: 740px) {
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .email {
+        margin-bottom: 10px;
+      }
+      .icons {
+        padding: 10px 0;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,467 @@
+#aboutMe {
+  background-image: url("../../../assets/img/aboutMe.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  color: white;
+  .aboutMe {
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+    .moblie {
+      display: none;
+    }
+    .moblieTitle {
+      display: none;
+    }
+    .aboutMeImg {
+      width: 40%;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      .img1,
+      .img2 {
+        opacity: 0;
+        transform: scale(0.8);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .img1[data-aos="zoom-in"],
+      .img2[data-aos="fade-up"] {
+        opacity: 1;
+        transform: scale(1);
+      }
+      img {
+        border-radius: 20px;
+        width: 480px;
+        height: 480px;
+        transition: 0.2s ease-in-out;
+      }
+      .img1 {
+        position: absolute;
+        top: -50px;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        z-index: 4;
+      }
+
+      .img1:hover {
+        transform: scale(1.1) translateY(-10px);
+        z-index: 3;
+        cursor: pointer;
+      }
+    
+      .img2:hover {
+        transform: scale(1.1) translateY(-10px);
+        z-index: 4;
+        cursor: pointer;
+      }
+      .img2 {
+        position: absolute;
+        top: 134px;
+        left: 90px;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+      }
+    }
+    
+    .aboutMeText {
+      width: 60%;
+      h3 {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 43.2px;
+      }
+      h1 {
+        font-size: 86px;
+        font-weight: 400;
+        line-height: 103.2px;
+      }
+
+      p {
+        font-size: 34px;
+        padding-top: 24px;
+        font-weight: 500;
+        line-height: 40.8px;
+      }
+      button {
+        padding: 30px 43px;
+        font-size: 34px;
+        color: rgba(77, 11, 25, 1);
+        background-color: white;
+        border-radius: 7px;
+        font-weight: 500;
+        outline: none;
+        margin-top: 24px;
+        border: none;
+        transition: 0.4s ease-in-out;
+        &:hover {
+          background-color: rgba(77, 11, 25, 1);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  #aboutMe {
+    .aboutMe {
+      .aboutMeImg {
+        img {
+          width: 420px;
+          height: 420px;
+        }
+        .img1 {
+          top: -50px;
+        }
+        .img2 {
+          top: 114px;
+          left: 90px;
+        }
+      }
+      .aboutMeText {
+        h3 {
+          font-size: 30px;
+          line-height: 33.2px;
+        }
+        h1 {
+          margin-top: 24px;
+          font-size: 66px;
+          line-height: 83.2px;
+        }
+        p {
+          font-size: 28px;
+          padding-top: 18px;
+        }
+        button {
+          padding: 20px 26px;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1340px) {
+  #aboutMe {
+    padding: 70px 0;
+    .aboutMe {
+      .aboutMeImg {
+        img {
+          width: 320px;
+          height: 320px;
+        }
+        .img1 {
+          top: 0px;
+        }
+        .img2 {
+          top: 94px;
+          left: 90px;
+        }
+      }
+      .aboutMeText {
+        h3 {
+          font-size: 27px;
+          line-height: 0.2px;
+        }
+        h1 {
+          margin-top: 24px;
+          font-size: 66px;
+          line-height: 63.2px;
+        }
+        p {
+          font-size: 23px;
+          padding-top: 20px;
+          line-height: 30.8px;
+        }
+        button {
+          padding: 17px 20px;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  #aboutMe {
+    padding: 70px 0;
+    .aboutMe {
+      .aboutMeImg {
+        img {
+          width: 300px;
+          height: 300px;
+        }
+        .img1 {
+          top: -10px;
+        }
+        .img2 {
+          top: 84px;
+          left: 90px;
+        }
+      }
+      .aboutMeText {
+        width: 50%;
+        h3 {
+          font-size: 24px;
+          line-height: 0.2px;
+        }
+        h1 {
+          margin-top: 24px;
+          font-size: 56px;
+          line-height: 63.2px;
+        }
+        p {
+          font-size: 20px;
+          padding-top: 20px;
+          line-height: 27.8px;
+        }
+        button {
+          padding: 14px 17px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  #aboutMe {
+    padding: 50px 0;
+    .aboutMe {
+      .aboutMeImg {
+        img {
+          width: 220px;
+          height: 220px;
+        }
+        .img1 {
+          top: -10px;
+        }
+        .img2 {
+          top: 74px;
+          left: 70px;
+        }
+        &:hover .img1 {
+          transform: initial;
+        }
+        &:hover .img2 {
+          transform: initial;
+        }
+      }
+      .aboutMeText {
+        width: 50%;
+        h3 {
+          font-size: 20px;
+          line-height: 0px;
+        }
+        h1 {
+          margin-top: 30px;
+          font-size: 38px;
+          line-height: 30.2px;
+        }
+        p {
+          font-size: 15px;
+          padding-top: 16px;
+          line-height: 20.8px;
+        }
+        button {
+          padding: 12px 14px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  #aboutMe {
+    padding: 30px 0;
+    .aboutMe {
+      gap: 0px;
+      .moblieTitle {
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .moblie {
+        display: block;
+        padding: 0px 0 30px 0;
+        font-size: 44.95px;
+        font-weight: 400;
+      }
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .aboutMeImg {
+        height: 400px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 320px;
+          height: 320px;
+        }
+        .img1 {
+          top: 10px;
+        }
+        .img2 {
+          top: 60px;
+          left: 35%;
+        }
+      }
+      .aboutMeText {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        h3 {
+          display: none;
+        }
+        h1 {
+          display: none;
+        }
+        p {
+          font-size: 25px;
+          padding-top: 16px;
+          line-height: 35.8px;
+          text-align: center;
+        }
+        button {
+          padding: 17px 24px;
+          margin-top: 25px;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  #aboutMe {
+    padding: 30px 0;
+    .aboutMe {
+      gap: 0px;
+      .moblieTitle {
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .moblie {
+        display: block;
+        padding: 0px 0 30px 0;
+        font-size: 40.95px;
+        font-weight: 400;
+      }
+      .aboutMeImg {
+        height: 400px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 300px;
+          height: 300px;
+        }
+        .img1 {
+          top: -10px;
+          left: 50px;
+        }
+        .img2 {
+          top: 74px;
+          left: 22%;
+        }
+      }
+      .aboutMeText {
+        p {
+          font-size: 20px;
+          padding-top: 16px;
+          line-height: 30.8px;
+        }
+        button {
+          padding: 17px 24px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  #aboutMe {
+    .aboutMe {
+      .moblieTitle {
+        font-size: 14px;
+      }
+      .moblie {
+        padding: 0px 0 30px 0;
+        font-size: 24.95px;
+      }
+      .aboutMeImg {
+        height: 290px;
+        img {
+          width: 240px;
+          height: 240px;
+        }
+        .img1 {
+          top: -20px;
+          left: 40px;
+        }
+        .img2 {
+          top: 55px;
+          left: 25%;
+        }
+      }
+      .aboutMeText {
+        p {
+          font-size: 18px;
+          padding-top: 16px;
+          line-height: 23.8px;
+        }
+        button {
+          padding: 13px 20px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  #aboutMe {
+    padding: 20px 0;
+    .aboutMe {
+      .moblieTitle {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .moblie {
+        font-size: 24.95px;
+      }
+      .aboutMeImg {
+        height: 290px;
+        img {
+          width: 240px;
+          height: 240px;
+        }
+        .img1 {
+          top: -10px;
+          left: 6px;
+        }
+        .img2 {
+          top: 54px;
+          left: 14%;
+        }
+      }
+      .aboutMeText {
+        p {
+          font-size: 16px;
+          line-height: 20.8px;
+        }
+        button {
+          padding: 10px 15px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

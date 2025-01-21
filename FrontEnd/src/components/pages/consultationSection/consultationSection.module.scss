@@ -1,0 +1,636 @@
+#consul {
+  padding-bottom: 60px;
+  padding-top: 40px;
+
+  .consul {
+    width: 65%;
+    height: 100%;
+    background: white;
+
+    margin: 0 auto;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+
+    .consul_line {
+      border: 2px dashed #5e0b1c;
+      border-radius: 10px;
+      color: black;
+      padding-bottom: 50px;
+
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          font-size: clamp(40px, 5vw, 70px);
+          font-weight: 200;
+          line-height: clamp(50px, 6vw, 80px);
+          text-align: center;
+          color: black;
+          letter-spacing: 4px;
+          width: 80%;
+          margin: 30px 0 50px 0;
+        }
+      }
+
+      .consul_text {
+        display: flex;
+        padding: 0px 60px;
+        flex-direction: column;
+        gap: 20px;
+
+        p {
+          font-size: clamp(16px, 2vw, 22px);
+          color: black;
+          margin-bottom: 20px;
+          letter-spacing: 2px;
+        }
+
+        li {
+          font-size: clamp(16px, 2vw, 22px);
+          line-height: clamp(35px, 3vw, 45px);
+        }
+
+        .textBottom {
+          margin-top: clamp(10px, 3vw, 30px);
+
+          h4 {
+            line-height: clamp(12px, 3vw, 42px);
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: clamp(8px, 5vw, 20px);
+          }
+        }
+      }
+
+      .consul_btn {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-top: 50px;
+
+        .btn1,
+        .btn2 {
+          padding: clamp(20px, 2vw, 30px);
+          font-size: clamp(18px, 2vw, 28px);
+        }
+
+        .btn1 {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          background: #816959;
+          color: white;
+        }
+
+        .btn2 {
+          outline: none;
+          border: none;
+          background: #6d0d21;
+
+          color: white;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.modalWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: slideUp 0.5s ease-out forwards;
+
+  &.close {
+    animation: slideDown 0.5s ease-in forwards;
+  }
+}
+
+@media (max-width: 1430px) {
+  #consul {
+    .consul {
+      .consul_line {
+        .text {
+          h1 {
+            font-size: clamp(15px, 5vw, 50px);
+            line-height: clamp(45px, 6vw, 50px);
+          }
+        }
+
+        .consul_text {
+          .textBottom {
+            margin-top: clamp(4px, 3vw, 5px);
+
+            h4 {
+              line-height: clamp(12px, 3vw, 30px);
+              font-weight: 300;
+              letter-spacing: 2px;
+              font-size: clamp(14px, 2vw, 19px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1410px) {
+  #consul {
+    .consul {
+      .consul_line {
+        .text {
+          h1 {
+            font-size: clamp(35px, 5vw, 40px);
+            line-height: clamp(45px, 6vw, 60px);
+          }
+        }
+
+        .consul_text {
+          p {
+            font-size: clamp(16px, 2vw, 19px);
+          }
+
+          li {
+            line-height: clamp(30px, 3vw, 40px);
+          }
+
+          .textBottom {
+            margin-top: clamp(4px, 3vw, 5px);
+
+            h4 {
+              line-height: clamp(10px, 2vw, 30px);
+              font-weight: 300;
+              letter-spacing: 2px;
+              font-size: clamp(10px, 2vw, 19px);
+            }
+          }
+        }
+
+        .consul_btn {
+          .btn1,
+          .btn2 {
+            padding: clamp(15px, 2vw, 25px);
+            font-size: clamp(18px, 2vw, 25px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1290px) {
+  #consul {
+    .consul {
+      .consul_line {
+        padding-bottom: 33px;
+
+        .text {
+          h1 {
+            margin: 20px 0 30px 0;
+            font-size: clamp(20px, 5vw, 35px);
+            line-height: clamp(40px, 6vw, 50px);
+          }
+        }
+
+        .consul_text {
+          gap: 10px;
+
+          p {
+            margin-bottom: 10px;
+            font-size: clamp(14px, 2vw, 16px);
+          }
+
+          li {
+            line-height: clamp(25px, 3vw, 35px);
+            font-size: clamp(15px, 2vw, 18px);
+          }
+
+          .textBottom {
+            margin-top: clamp(4px, 3vw, 5px);
+
+            h4 {
+              line-height: clamp(12px, 3vw, 13px);
+              font-weight: 300;
+              letter-spacing: 2px;
+              font-size: clamp(6px, 2vw, 13px);
+            }
+          }
+        }
+
+        .consul_btn {
+          margin-top: 30px;
+
+          .btn1,
+          .btn2 {
+            padding: clamp(15px, 2vw, 25px);
+            font-size: clamp(15px, 2vw, 23px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1290px) {
+  #consul {
+    .consul {
+      .consul_line {
+        padding-bottom: 25px;
+
+        .text {
+          h1 {
+            margin: 20px 0 22px;
+            font-size: clamp(11px, 3vw, 34px);
+            line-height: clamp(22px, 6vw, 43px);
+          }
+        }
+
+        .consul_text {
+          gap: 8px;
+
+          p {
+            margin-bottom: 3px;
+            font-size: clamp(7px, 2vw, 14px);
+          }
+
+          li {
+            line-height: clamp(15px, 3vw, 29px);
+            font-size: clamp(7px, 2vw, 14px);
+          }
+          .textBottom {
+            margin-top: clamp(4px, 3vw, 5px);
+
+            h4 {
+              line-height: clamp(7px, 3vw, 15px);
+              font-weight: 300;
+              letter-spacing: 2px;
+              font-size: clamp(5px, 2vw, 10px);
+            }
+          }
+        }
+
+        .consul_btn {
+          margin-top: 25px;
+
+          .btn1,
+          .btn2 {
+            padding: clamp(10px, 2vw, 20px);
+            font-size: clamp(8px, 2vw, 17px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1077px) {
+  #consul {
+    .consul {
+      width: 55%;
+      padding: 20px;
+
+      .consul_line {
+        padding-bottom: 25px;
+
+        .text {
+          h1 {
+            font-size: clamp(13px, 3vw, 26px);
+            line-height: clamp(20px, 6vw, 40px);
+            margin: 20px 0px 20px;
+          }
+        }
+
+        .consul_text {
+          padding: 0px 28px;
+          gap: 5px;
+
+          p {
+            margin-bottom: 3px;
+            font-size: clamp(3px, 2vw, 11px);
+          }
+
+          li {
+            line-height: clamp(15px, 3vw, 23px);
+            font-size: clamp(3px, 2vw, 11px);
+          }
+        }
+
+        .consul_btn {
+          margin-top: 20px;
+
+          .btn1,
+          .btn2 {
+            padding: clamp(10px, 2vw, 15px);
+            font-size: clamp(8px, 2vw, 15px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 962px) {
+  #consul {
+    .consul {
+      width: 65%;
+      padding: 20px;
+
+      .consul_line {
+        padding-bottom: 20px;
+
+        .text {
+          h1 {
+            font-size: clamp(9px, 3vw, 25px);
+            line-height: clamp(10px, 6vw, 33px);
+            margin: 17px 0px 17px;
+          }
+        }
+
+        .consul_text {
+          padding: 0px 30px;
+          gap: 15px;
+
+          p {
+            margin-bottom: 5px;
+            font-size: clamp(3px, 2vw, 14px);
+          }
+
+          li {
+            line-height: clamp(15px, 3vw, 25px);
+            font-size: clamp(3px, 2vw, 14px);
+          }
+
+          h4 {
+            margin-top: 3px;
+            // font-size: clamp(3px, 2vw, 13px);
+            // line-height: clamp(10px, 2vw, 21px);
+          }
+        }
+
+        .consul_btn {
+          margin-top: 20px;
+
+          .btn1,
+          .btn2 {
+            padding: clamp(10px, 2vw, 20px);
+            font-size: clamp(8px, 2vw, 15px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 785px) {
+  #consul {
+    .consul {
+      width: 75%;
+      padding: 20px;
+
+      .consul_line {
+        padding-bottom: 25px;
+
+        .text {
+          h1 {
+            font-size: clamp(9px, 3vw, 25px);
+            line-height: clamp(10px, 6vw, 30px);
+            margin: 20px 0px 20px;
+          }
+        }
+
+        .consul_text {
+          padding: 0px 28px;
+          gap: 10px;
+
+          p {
+            margin-bottom: 3px;
+            font-size: clamp(3px, 2vw, 12px);
+          }
+
+          li {
+            line-height: clamp(15px, 3vw, 20px);
+            font-size: clamp(3px, 2vw, 12px);
+          }
+
+          h4 {
+            margin-top: 3px;
+            // font-size: clamp(3px, 2vw, 12px);
+            // line-height: clamp(10px, 3vw, 17px);
+          }
+        }
+
+        .consul_btn {
+          margin-top: 20px;
+
+          .btn1,
+          .btn2 {
+            padding: clamp(10px, 2vw, 15px);
+            font-size: clamp(8px, 2vw, 15px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #consul {
+    padding-top: 100px;
+    .consul {
+      .consul_line {
+        .consul_text {
+          h4 {
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #consul {
+    .consul {
+      width: 100%;
+      padding: 20px;
+
+      .consul_line {
+        padding-bottom: 30px;
+
+        .text {
+          h1 {
+            font-size: clamp(9px, 5vw, 25px);
+            line-height: clamp(10px, 7vw, 35px);
+            margin: 25px 0px 30px;
+          }
+        }
+
+        .consul_text {
+          padding: 0px 28px;
+          gap: 15px;
+
+          p {
+            margin-bottom: 3px;
+            font-size: clamp(3px, 2vw, 20px);
+          }
+
+          li {
+            line-height: clamp(15px, 4vw, 30px);
+            font-size: clamp(3px, 2vw, 20px);
+          }
+
+          h4 {
+            margin-top: 3px;
+            font-size: clamp(3px, 2vw, 20px);
+            line-height: clamp(10px, 3vw, 19px);
+          }
+        }
+
+        .consul_btn {
+          margin-top: 25px;
+
+          .btn1,
+          .btn2 {
+            padding: clamp(10px, 2vw, 15px);
+            font-size: clamp(8px, 3vw, 20px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 545px) {
+  #consul {
+    .consul {
+      width: 100%;
+      padding: 20px;
+
+      .consul_line {
+        padding-bottom: 30px;
+
+        .text {
+          h1 {
+            font-size: clamp(9px, 4vw, 25px);
+            line-height: clamp(10px, 7vw, 35px);
+            margin: 20px 0px 20px;
+          }
+        }
+
+        .consul_text {
+          padding: 0px 28px;
+          gap: 10px;
+
+          p {
+            margin-bottom: 3px;
+            font-size: clamp(3px, 2vw, 20px);
+          }
+
+          li {
+            line-height: clamp(15px, 4vw, 30px);
+            font-size: clamp(3px, 2vw, 20px);
+          }
+
+          h4 {
+            margin-top: 3px;
+            // font-size: clamp(3px, 2vw, 20px);
+            // line-height: clamp(10px, 3vw, 19px);
+          }
+        }
+
+        .consul_btn {
+          margin-top: 20px;
+
+          .btn1,
+          .btn2 {
+            padding: clamp(10px, 2vw, 15px);
+            font-size: clamp(8px, 3vw, 20px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 395px) {
+  #consul {
+    .consul {
+      width: 100%;
+      padding: 10px;
+
+      .consul_line {
+        padding-bottom: 30px;
+
+        .text {
+          h1 {
+            font-size: clamp(9px, 4vw, 25px);
+            line-height: clamp(10px, 7vw, 35px);
+            margin: 20px 0px 20px;
+          }
+        }
+
+        .consul_text {
+          padding: 0px 28px;
+          gap: 10px;
+
+          p {
+            margin-bottom: 3px;
+            font-size: clamp(3px, 2vw, 20px);
+          }
+
+          li {
+            line-height: clamp(10px, 4vw, 25px);
+            font-size: clamp(3px, 2vw, 20px);
+          }
+        }
+
+        .consul_btn {
+          margin-top: 10px;
+
+          .btn1,
+          .btn2 {
+            padding: clamp(10px, 2vw, 15px);
+            font-size: clamp(8px, 1vw, 20px);
+          }
+        }
+      }
+    }
+  }
+}

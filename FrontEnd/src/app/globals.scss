@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Caviar Dreams Bold";
+  src: url("./fonts/caviar-dreams-bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: "Caviar Dreams Bold" !important;
+}
+body {
+  font-family: inherit;
+
+
+
+
+  background: #4d0b19;
+
+}
+
+.container {
+  max-width: 1740px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+button {
+  cursor: pointer;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}

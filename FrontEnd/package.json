@@ -1,0 +1,36 @@
+{
+  "name": "amandas-web-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@barba/core": "^2.10.3",
+    "@next/font": "^14.2.15",
+    "@reduxjs/toolkit": "^2.5.0",
+    "aos": "^2.3.4",
+    "axios": "^1.7.9",
+    "framer-motion": "^11.15.0",
+    "next": "15.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.1",
+    "react-icons": "^5.4.0",
+    "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.2",
+    "sass": "^1.83.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "espree": "^10.3.0",
+    "typescript": "^5"
+  }
+}
