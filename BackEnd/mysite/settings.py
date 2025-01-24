@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'mysite.middleware.LanguageMiddleware',  # Наш новый middleware
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -168,3 +169,8 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOW_METHODS = ['GET','POST','PUT','PATCH','DELETE', 'OPTIONS']
+
+
+
+CSRF_COOKIE_SECURE = True  # Если сервер работает по HTTPS
+CSRF_TRUSTED_ORIGINS = ['https://7goddess.com']  # Добавьте ваш домен
